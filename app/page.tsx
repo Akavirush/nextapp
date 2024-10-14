@@ -1,94 +1,87 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <div className='container'>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section className='home-cover'>
+          <h2>Анонсы</h2>
+          <div className="home-cover__container">
+            <div className="card-wrapper">
+              <ul className="card-list">
+                <li className='card-item'>
+                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
+                </li>
+                <li className='card-item'>
+                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
+                </li>
+                <li className='card-item'>
+                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
+                </li>
+              </ul>
+              <button className='prev-btn'><img src='/icons/swiper-icon.svg'></img></button>
+              <button className='next-btn'><img src='/icons/swiper-icon.svg'></img></button>
+            </div>
+          </div>
+        </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <section className='home-news'>
+          <h2>Новости</h2>
+          <ul>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-1.png' alt='/'></img>Иконы рока. Как всё начиналось: Крис Корнел</a></p>
+            </li>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-2.png' alt='/'></img>«Русская Медиагруппа» выступила инфопартнёром мачта Лиги легенд «Зенит» - ЦСКА</a></p>
+            </li>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-3.png' alt='/'></img>Рок и автомобили: культовые машины рок-звезд</a></p>
+            </li>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-4.png' alt='/'></img>21 сентября на «Moscow Raceway» состоится финал кольцевых автогонок суперкаров</a></p>
+            </li>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-5.png' alt='/'></img>История одного хита: Highway to Hell (AC/DC)</a></p>
+            </li>
+            <li>
+              <p className='home-news__data'>2 октября</p>
+              <p className='home-news__link'><a href='/'><img src='/image/news-pic-6.png' alt='/'></img>Рокеры, чья дружба проверена временем</a></p>
+            </li>
+          </ul>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <section className='home-about'>
+          <h2>О компании</h2>
+          <div className='home-about__columns'>
+            <p className='home-about__txt'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ex impedit cum accusantium ipsum dignissimos velit! Doloribus esse at, expedita consectetur odit corrupti dolorum. Repellendus amet quos ducimus expedita deserunt?</p>
+            <ul>
+              <li>
+                <p className='home__playlist-name'><a><img src="/image/playlist-1.png" className='home__playlist-img'></img>MORRO ROCK</a></p>
+                <img src='/icons/icon-arrow.svg' className='img-button'></img>
+                <p className='home__playlist-time'>4h 36m</p>
+              </li>
+              <li>
+                <p className='home__playlist-name'><a><img src="/image/playlist-2.png" className='home__playlist-img'></img>PACIFIC DREAMS</a></p>
+                <img src='/icons/icon-arrow.svg' className='img-button'></img>
+                <p className='home__playlist-time'>4h 36m</p>
+              </li>
+              <li>
+                <p className='home__playlist-name'><a><img src="/image/playlist-3.png" className='home__playlist-img'></img>NIGHT FM</a></p>
+                <img src='/icons/icon-arrow.svg' className='img-button'></img>
+                <p className='home__playlist-time'>4h 36m</p>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   )
