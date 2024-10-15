@@ -30,11 +30,11 @@ export default function Home() {
               }}
             >
               <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
-              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
-              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
-              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
-              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
-              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-2.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-3.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-4.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-5.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-6.jpg' className='card-image'></img></a></SwiperSlide>
             </Swiper>
           </div>
         </section>
