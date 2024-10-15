@@ -1,30 +1,41 @@
+'use client';
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className='container'>
-
         <section className='home-cover'>
           <h2>Анонсы</h2>
-          <div className="home-cover__container">
-            <div className="card-wrapper">
-              <ul className="card-list">
-                <li className='card-item'>
-                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
-                </li>
-                <li className='card-item'>
-                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
-                </li>
-                <li className='card-item'>
-                  <a href='/' className='card-link'><img src='/image/announce-pic-1.jpg' alt='Card Image' className='card-image'></img></a>
-                </li>
-              </ul>
-              <button className='prev-btn'><img src='/icons/swiper-icon.svg'></img></button>
-              <button className='next-btn'><img src='/icons/swiper-icon.svg'></img></button>
-            </div>
+          <div className="card-wrapper">
+            <Swiper
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
+              spaceBetween={10}
+              slidesPerView={3}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+              breakpoints= {{
+                340: { slidesPerView: 1 },
+                576: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+              }}
+            >
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+              <SwiperSlide><a href='/'><img src='/image/announce-pic-1.jpg' className='card-image'></img></a></SwiperSlide>
+            </Swiper>
           </div>
         </section>
 
