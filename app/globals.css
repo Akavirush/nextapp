@@ -1,22 +1,10 @@
-html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: 'Inter';
-	vertical-align: baseline;
-}
 
 svg {
 	display: block;
 	color: inherit;
 }
 
-.sitelogo {
-	display: flex;
-	width: 40px;
-	height: 40px;
-}
+
 
 /* Контейнер */
 
@@ -27,21 +15,21 @@ svg {
 
 @media (max-width: 1300px) {
 	.container {
-		max-width: 1280px;
+		max-width: 100%;
 		margin: 0 32px;
 	}
 }
 
 @media (max-width: 992px) {
 	.container {
-    max-width: 972px;
+		max-width: 972px;
 		margin: 0 24px;
 	}
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
 	.container {
-		max-width: 555px;
+		max-width: 556px;
 		margin: 0 16px;
 	}
 	h2 {
@@ -50,14 +38,22 @@ svg {
 	}
 }
 
-.sitelogo {
-	display: flex;
-	width: 40px;
-	height: 40px;
+
+/* Слайдер - кнопки */
+
+.swiper-button-prev, .swiper-button-next {
+	fill: #212521;
+	stroke: #212521;
+	--swiper-navigation-size: 26px;
+	background-color: white;
+	padding: 8px;
+	border-radius: 5px;
+	--swiper-theme-color: #212521;
+	transition: 100ms ease;
 }
 
-.container {
-	max-width: 1280px;
+.swiper-button-prev:hover, .swiper-button-next:hover {
+	background-color: #FCEE0A;
 }
 
 /* Слайдер */
@@ -71,6 +67,7 @@ svg {
 .card-wrapper {
 	display: flex;
 	position: relative;
+	max-width: 1280px;
 }
 
 .home-cover a {
@@ -142,8 +139,8 @@ svg {
 
 .home-news img {
 	display: block;
-	width: 120px;
-	height: 120px;
+	max-width: 130px;
+	max-height: 130px;
 	padding: 5px;
 	position: absolute;
 	top: 0;
@@ -271,10 +268,10 @@ svg {
 .home__playlist-img {
 	display: block;
 	position: absolute;
-	width: 170px;
-	height: 140px;
+	max-width: 200px;
+	max-height: 170px;
 	padding: 15px;
-	border-radius: 20px;
+	border-radius: 10%;
 	top: 0;
 	left: 0;
 }
@@ -346,8 +343,8 @@ svg {
 		height: 110px;
 	}
 	.home__playlist-img {
-		width: 120px;
-		height: 90px;
+		width: 140px;
+		height: 110px;
 		padding: 10px;
 		border-radius: 10px;
 	}
@@ -357,19 +354,12 @@ svg {
 		padding-top: 15px;
 		font-size: 16px;
 	}
-	.home-about button {
-		padding: 5px;
-		left: 150px;
-		bottom: 15px;
-	}
 	.home__playlist-time {
 		bottom: 15px;
 		right: 15px;
 		font-size: 14px;
 	}
 	.img-button {
-	width: 20px;
-	height: 20px;
 	padding: 8px;
 	bottom: 10px;
 	left: 150px;

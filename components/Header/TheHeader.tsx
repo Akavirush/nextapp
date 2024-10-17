@@ -9,22 +9,22 @@ export const TheHeader = () => {
         <header className='navigation'>
             <div className='container'>
                 <div className='nav-bar'>
-                <h1><Link className='sitelogo' href="/"><img src='/logo.svg'></img></Link></h1>
-                <nav className={`${isOpen ? "active" : ""}`}>
-                    <ul>
-                    <li>
-                        <Link href="/">О НАС</Link>
-                    </li>
-                    <li>
-                        <Link href="/">ПРОГРАММЫ</Link>
-                    </li>
-                    <li>
-                        <Link href="/">КОНТАКТЫ</Link>
-                    </li>
-                    </ul>
-                </nav>
-                <button className='cms-auth'>Войти</button>
-                <button className='burger-btn' onClick={() => setOpen(!isOpen)}><img src='/icons/burger-icon.svg'></img></button>
+                    <h1><Link className="sitelogo" href="/"><img src='/logo.svg'></img></Link></h1>
+                    <nav className={`${isOpen ? "active" : ""}`}>
+                        <ul>
+                        <li>
+                            <Link className="nav-link" href="/">О НАС</Link>
+                        </li>
+                        <li>
+                            <Link className="nav-link" href="/">ПРОГРАММЫ</Link>
+                        </li>
+                        <li>
+                            <Link className="nav-link" href="/">КОНТАКТЫ</Link>
+                        </li>
+                        </ul>
+                    </nav>
+                    <button className='cms-auth'>Войти</button>
+                    <button className='burger-btn' onClick={() => setOpen(!isOpen)}><img src='/icons/burger-icon.svg'></img></button>
                 </div>
             </div>
         </header>

@@ -6,23 +6,22 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <div className='container'>
         <section className='home-cover'>
           <h2>Анонсы</h2>
           <div className="card-wrapper">
             <Swiper
-              navigation={true}
               modules={[Navigation]}
+              navigation={true}
               className="mySwiper"
               spaceBetween={10}
               slidesPerView={3}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
+              loop={true}
               breakpoints= {{
                 340: { slidesPerView: 1 },
                 576: { slidesPerView: 2 },
