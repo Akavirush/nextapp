@@ -13,13 +13,13 @@ export const TheHeader = () => {
                     <nav className={`${isOpen ? "active" : ""}`}>
                         <ul>
                         <li>
-                            <Link className="nav-link" href="/">О НАС</Link>
+                            <Link className="nav-link" href="/about">О НАС</Link>
                         </li>
                         <li>
                             <Link className="nav-link" href="/">ПРОГРАММЫ</Link>
                         </li>
                         <li>
-                            <Link className="nav-link" href="/">КОНТАКТЫ</Link>
+                            <Link className="nav-link" href="/contacts">КОНТАКТЫ</Link>
                         </li>
                         </ul>
                     </nav>
