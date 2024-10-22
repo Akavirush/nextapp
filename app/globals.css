@@ -65,9 +65,13 @@ svg {
 }
 
 .card-wrapper {
-	display: flex;
-	position: relative;
-	max-width: 1280px;
+	visibility: hidden;
+	min-height: 240px;
+}
+
+.swiper-initialized {
+	display: block;
+	visibility: visible;
 }
 
 .home-cover a {
