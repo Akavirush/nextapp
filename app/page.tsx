@@ -1,19 +1,19 @@
 'use client';
-import Image from 'next/image'
-import styles from './page.module.css'
-import Link from 'next/link'
+import Image from 'next/image';
+import styles from './page.module.css';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 
 async function getData() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const response = await fetch('http://localhost:3000/api/articles');
   return response.json();
 }
 
 export default async function Home() {
-  const news = await getData()
+  const articles = await getData()
 
   return (
     <main>
@@ -47,27 +47,27 @@ export default async function Home() {
         <section className='home-news'>
           <h2>Новости</h2>
           <ul>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-1.png' alt='/'></img>Иконы рока. Как всё начиналось: Крис Корнел</Link></p>
               </li>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-2.png' alt='/'></img>«Русская Медиагруппа» выступила инфопартнёром мачта Лиги легенд «Зенит» - ЦСКА</Link></p>
               </li>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-3.png' alt='/'></img>Рок и автомобили: культовые машины рок-звезд</Link></p>
               </li>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-4.png' alt='/'></img>21 сентября на «Moscow Raceway» состоится финал кольцевых автогонок суперкаров</Link></p>
               </li>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-5.png' alt='/'></img>История одного хита: Highway to Hell (AC/DC)</Link></p>
               </li>
-              <li key={news.id}>
+              <li>
                 <p className='home-news__data'>2 октября</p>
                 <p className='home-news__link'><Link href='/'><img src='/image/news-pic-6.png' alt='/'></img>Рокеры, чья дружба проверена временем</Link></p>
               </li>
@@ -101,9 +101,9 @@ export default async function Home() {
         <section className='home-posts'>
           <h2>Посты</h2>
           <ul>
-            {news.map((post:any) => (
-              <li key={post.id}>
-                <Link href='/'>{post.title}</Link>
+            {articles((article:any) => (
+              <li key={article.id}>
+                <Link href='/'>{article.title}</Link>
               </li>
             ))}
           </ul>
