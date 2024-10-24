@@ -408,3 +408,8 @@ svg {
 		columns: 1;
 	}
 }
+
+.article-info {
+	margin-top: 150px;
+	min-height: 980px;
+}

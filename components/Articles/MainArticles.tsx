@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 async function getData() {
     const response = await fetch('http://localhost:3000/api/articles');
-    return response.json();
+    const result = await response.json();
+    return result;
 }
 
 export async function MainArticles () {
@@ -11,7 +12,7 @@ export async function MainArticles () {
         <ul>
             {articles.map((article:any) => (
                 <li key={article.id}>
-                    <Link href='/'>{article.title}</Link>
+                    <Link href={`/post/`+ article.id}>{article.title}</Link>
                 </li>
             ))}
         </ul>
