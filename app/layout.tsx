@@ -30,7 +30,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <TheHeader />
-        <mainArticles />
         {children}
         <TheFooter />
       </body>
